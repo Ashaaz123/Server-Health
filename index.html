@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Server Health Monitor</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="header">
+        <h1>🚀 Server Health Monitor</h1>
+        <p class="subtitle">Real-Time Infrastructure Dashboard</p>
+    </div>
+
+    <div class="dashboard">
+
+        <div class="card">
+            <div class="metric-title">
+                <i class="fas fa-microchip"></i> CPU Usage
+            </div>
+            <div class="value" id="cpuValue">0%</div>
+            <div class="progress">
+                <div class="progress-bar" id="cpuBar"></div>
+            </div>
+            <div class="status" id="cpuStatus"></div>
+        </div>
+
+        <div class="card">
+            <div class="metric-title">
+                <i class="fas fa-memory"></i> RAM Usage
+            </div>
+            <div class="value" id="ramValue">0%</div>
+            <div class="progress">
+                <div class="progress-bar" id="ramBar"></div>
+            </div>
+            <div class="status" id="ramStatus"></div>
+        </div>
+
+        <div class="card">
+            <div class="metric-title">
+                <i class="fas fa-hard-drive"></i> Disk Usage
+            </div>
+            <div class="value" id="diskValue">0%</div>
+            <div class="progress">
+                <div class="progress-bar" id="diskBar"></div>
+            </div>
+            <div class="status" id="diskStatus"></div>
+        </div>
+
+        <div class="card">
+            <div class="metric-title">
+                <i class="fas fa-network-wired"></i> Network Usage
+            </div>
+            <div class="value" id="networkValue">0 Mbps</div>
+            <div class="progress">
+                <div class="progress-bar" id="networkBar"></div>
+            </div>
+            <div class="status" id="networkStatus"></div>
+        </div>
+
+        <!-- Extra Card -->
+        <div class="card">
+            <div class="metric-title">
+                <i class="fas fa-server"></i> System Uptime
+            </div>
+            <div class="value">99.99%</div>
+            <div class="status" style="color:#22c55e;">
+                🟢 Operational
+            </div>
+        </div>
+
+    </div>
+
+    <div class="footer">
+        Last Updated:
+        <span id="time"></span>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
