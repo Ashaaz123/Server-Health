@@ -32,10 +32,10 @@ h1{
 
 .card{
     background:#111827;
-    border:1px solid #1e293b;
+    border:1px solid #7b8492;
     border-radius:20px;
     padding:25px;
-    box-shadow:0 0 25px rgba(59,130,246,0.15);
+    box-shadow:0 0 25px rgba(183, 185, 187, 0.15);
     transition:0.3s;
 }
 
@@ -45,7 +45,7 @@ h1{
 
 .metric-title{
     font-size:1.1rem;
-    color:#cbd5e1;
+    color:rgb(22, 121, 213);
     margin-bottom:15px;
 }
 
@@ -76,6 +76,109 @@ h1{
 .status{
     margin-top:15px;
     font-weight:bold;
+}
+.light-theme{
+    background:#f4f4f4;
+    color:#111827;
+}
+
+.light-theme .card{
+    background:white;
+    color:black;
+}
+.top-controls{
+    display:flex;
+    justify-content:flex-end;
+    align-items:center;
+    gap:15px;
+    margin-bottom:20px;
+}
+
+#themeToggle{
+    background:#2563eb;
+    color:white;
+    border:none;
+    padding:12px 20px;
+    border-radius:12px;
+    cursor:pointer;
+    font-weight:600;
+    font-size:0.95rem;
+    transition:0.3s;
+    box-shadow:0 4px 15px rgba(37,99,235,0.3);
+}
+
+#themeToggle:hover{
+    transform:translateY(-2px);
+    box-shadow:0 8px 20px rgba(37,99,235,0.4);
+}
+
+.live-indicator{
+    background:#a2b0a7;
+    padding:10px 16px;
+    border-radius:12px;
+    color:white;
+    font-weight:bold;
+    box-shadow:0 8px 100px rgba(22,163,74,0.3);
+}
+.top-controls{
+    position:fixed;
+    top:20px;
+    right:25px;
+    display:flex;
+    gap:15px;
+    z-index:1000;
+}
+
+.live-indicator{
+    background:#1e293b;
+    color:white;
+    padding:12px 20px;
+    border-radius:15px;
+    font-weight:600;
+    display:flex;
+    align-items:center;
+    gap:10px;
+    box-shadow:0 0 15px rgba(0,255,100,0.3);
+}
+
+.live-dot{
+    width:12px;
+    height:12px;
+    background:#22c55e;
+    border-radius:50%;
+    animation:pulse 1s infinite;
+}
+
+@keyframes pulse{
+    0%{
+        transform:scale(1);
+        opacity:1;
+    }
+    50%{
+        transform:scale(1.5);
+        opacity:0.6;
+    }
+    100%{
+        transform:scale(1);
+        opacity:1;
+    }
+}
+
+#themeToggle{
+    border:none;
+    padding:12px 22px;
+    border-radius:15px;
+    cursor:pointer;
+    background:#2563eb;
+    color:white;
+    font-size:16px;
+    font-weight:600;
+    transition:0.3s;
+}
+
+#themeToggle:hover{
+    transform:translateY(-2px);
+    box-shadow:0 0 20px rgba(37,99,235,0.5);
 }
 
 .footer{

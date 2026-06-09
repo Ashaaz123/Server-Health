@@ -10,77 +10,198 @@
 
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <body>
+    <div class="top-controls">
+    <div class="live-indicator">
+        <span class="live-dot"></span>
+            LIVE
+    </div>
+
+    <button id="themeToggle" onclick="toggleTheme()">
+        🌙 Dark Mode
+    </button>
+    </div>
 
     <div class="header">
+
         <h1>🚀 Server Health Monitor</h1>
-        <p class="subtitle">Real-Time Infrastructure Dashboard</p>
+
+        <p class="subtitle">
+            Real-Time Infrastructure Dashboard
+        </p>
+
+        
     </div>
 
     <div class="dashboard">
 
+        <!-- CPU -->
+
         <div class="card">
+
             <div class="metric-title">
-                <i class="fas fa-microchip"></i> CPU Usage
+                <i class="fas fa-microchip"></i>
+                CPU Usage
             </div>
-            <div class="value" id="cpuValue">0%</div>
+
+            <div class="value" id="cpuValue">
+                0%
+            </div>
+
             <div class="progress">
                 <div class="progress-bar" id="cpuBar"></div>
             </div>
+
             <div class="status" id="cpuStatus"></div>
+
         </div>
 
+        <!-- RAM -->
+
         <div class="card">
+
             <div class="metric-title">
-                <i class="fas fa-memory"></i> RAM Usage
+                <i class="fas fa-memory"></i>
+                RAM Usage
             </div>
-            <div class="value" id="ramValue">0%</div>
+
+            <div class="value" id="ramValue">
+                0%
+            </div>
+
             <div class="progress">
                 <div class="progress-bar" id="ramBar"></div>
             </div>
+
             <div class="status" id="ramStatus"></div>
+
         </div>
 
+        <!-- DISK -->
+
         <div class="card">
+
             <div class="metric-title">
-                <i class="fas fa-hard-drive"></i> Disk Usage
+                <i class="fas fa-hard-drive"></i>
+                Disk Usage
             </div>
-            <div class="value" id="diskValue">0%</div>
+
+            <div class="value" id="diskValue">
+                0%
+            </div>
+
             <div class="progress">
                 <div class="progress-bar" id="diskBar"></div>
             </div>
+
             <div class="status" id="diskStatus"></div>
+
+            <div id="diskDetails">
+
+                Used: --
+
+                <br>
+
+                Free: --
+
+                <br>
+
+                Total: --
+
+            </div>
+
         </div>
 
+        <!-- NETWORK -->
+
         <div class="card">
+
             <div class="metric-title">
-                <i class="fas fa-network-wired"></i> Network Usage
+                <i class="fas fa-network-wired"></i>
+                Network Usage
             </div>
-            <div class="value" id="networkValue">0 Mbps</div>
+
+            <div class="value" id="networkValue">
+                0 KB/s
+            </div>
+
             <div class="progress">
                 <div class="progress-bar" id="networkBar"></div>
             </div>
+
             <div class="status" id="networkStatus"></div>
+
         </div>
 
-        <!-- Extra Card -->
+        <!-- UPTIME -->
+
         <div class="card">
+
             <div class="metric-title">
-                <i class="fas fa-server"></i> System Uptime
+                <i class="fas fa-server"></i>
+                System Uptime
             </div>
-            <div class="value">99.99%</div>
-            <div class="status" style="color:#22c55e;">
+
+            <div class="value" id="uptimeValue">
+                Loading...
+            </div>
+
+            <div class="status" id="uptimeStatus">
                 🟢 Operational
             </div>
+
+        </div>
+
+        <!-- HOST INFO -->
+
+        <div class="card">
+
+            <div class="metric-title">
+                <i class="fas fa-desktop"></i>
+                Host Information
+            </div>
+
+            <div id="hostInfo">
+                Loading...
+            </div>
+
         </div>
 
     </div>
 
+    <!-- CPU CHART -->
+
+    <div class="card" style="margin-top:30px;">
+
+        <div class="metric-title">
+            📈 CPU Trend
+        </div>
+
+        <canvas id="cpuChart"></canvas>
+
+    </div>
+
+    <!-- RAM CHART -->
+
+    <div class="card" style="margin-top:30px;">
+
+        <div class="metric-title">
+            📈 RAM Trend
+        </div>
+
+        <canvas id="ramChart"></canvas>
+
+    </div>
+
     <div class="footer">
+
         Last Updated:
         <span id="time"></span>
+
     </div>
 
     <script src="script.js"></script>
