@@ -126,14 +126,8 @@ Through this project, I gained practical experience in:
 
 ### Ashaaz Ahmed Khan A
 
-Computer Science Engineering Student
-
-Agni College of Technology
-
-Passionate about DevOps, Cloud Computing, Software Development, and Full Stack Technologies.
-
 ---
 
 ## 📜 License
 
-This project is developed for educational and learning purposes.
+This project is developed to understand the basics of Server Monitoring
